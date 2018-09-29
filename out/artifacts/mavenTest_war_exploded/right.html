@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--<link rel="stylesheet" href="style1.css">-->
+    <style >
+        <!--优先级： 行内选择器> id选择器> 类选择器> 标签选择器-->
+
+        /*id选择器*/
+        #div1{
+            color: aqua;
+        }
+
+        /*类选择器*/
+        .class1{
+            color: chartreuse;
+        }
+
+        <!--标签选择器-->
+            div{
+                color: red;
+                font-size: 10px;
+            }
+
+    </style>
+
+    <script>
+        function test() {
+            var test = document.getElementById("test");
+            test.innerText = "666666666666666666666666"
+        }
+    </script>
 </head>
 <body>
 
 <h1>right</h1>
+<div id="div1" >66666666</div>
+<div class="class1">77777777777</div>
+<div>999999999999</div>
+<div style="width: 200px;height: 200px;color: aqua;background: chocolate;float: right;text-align: center" id="test">444444444444444</div>
+
+
+<input type="submit" value="提交" onclick="test()">
 
 </body>
 </html>
