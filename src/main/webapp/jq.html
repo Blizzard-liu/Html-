@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        function changeJS() {
+            var div = document.getElementById("div1");
+            div.innerText = "JS修改了内容"
+
+        }
+
+        $(function () {
+            alert("11")
+        });
+
+        $(function () {
+            $("#btnJQ").click(function () {
+                $("#div1").html("JQ哈哈哈")
+            })
+        });
+
+    </script>
+
+</head>
+<body>
+
+<input type="button" value="JS" onclick="changeJS()">
+<input type="button" value="JQ" id="btnJQ">
+
+<div id="div1">这里的内容将被js/JQ修改替换</div>
+
+</body>
+</html>

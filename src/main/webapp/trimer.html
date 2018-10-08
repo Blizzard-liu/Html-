@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var time;
+        function start() {
+            time=  setInterval(1000);
+            console.log("start")
+        }
+        function stop() {
+            clearInterval(time)
+        }
+    </script>
+</head>
+<body>
+
+<input type="button" value="开始" onclick="start()">
+<input type="button" value="结束" onclick="stop()">
+
+</body>
+</html>
