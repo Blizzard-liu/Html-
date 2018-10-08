@@ -7,7 +7,9 @@
     <script>
         function changeJS() {
             var div = document.getElementById("div1");
-            div.innerText = "JS修改了内容"
+            // div.innerText = "JS修改了内容"
+            //将js转成jq
+            $(div).html("转成JQ对象修改内容")
 
         }
 
@@ -17,7 +19,12 @@
 
         $(function () {
             $("#btnJQ").click(function () {
-                $("#div1").html("JQ哈哈哈")
+                // $("#div1").html("JQ哈哈哈")
+                //jq转成js
+                var $div = $("#div1");
+                var div = $div.get(0);
+                // var div = $div[0];
+                div.innerHTML = "jq转成js对象"
             })
         });
 
