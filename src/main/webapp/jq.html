@@ -14,6 +14,7 @@
         }
 
         $(function () {
+            //页面加载完成执行
             alert("11")
         });
 
@@ -28,6 +29,22 @@
             })
         });
 
+        $(function () {
+            $("#show").click(function (t) {
+                // $("#iv").show(3000);
+                // $("#iv").slideDown(3000);
+                // $("#iv").fadeIn(3000);
+                $("#iv").animate({width:"800px",opacity:"1"},3000);
+            });
+
+            $("#hide").click(function (t) {
+                // $("#iv").hide(3000);
+                // $("#iv").slideUp(3000);
+                // $("#iv").fadeOut(3000);
+                $("#iv").animate({width:"500px",opacity:"0.2"},3000);
+            })
+        })
+
     </script>
 
 </head>
@@ -37,6 +54,13 @@
 <input type="button" value="JQ" id="btnJQ">
 
 <div id="div1">这里的内容将被js/JQ修改替换</div>
+
+<hr>
+<input type="button" value="显示图片" id="show">
+<input type="button" value="隐藏图片" id="hide">
+<hr>
+
+<img src="2304-106.jpg" id="iv" style="display: none">
 
 </body>
 </html>
