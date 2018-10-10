@@ -2,8 +2,10 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -113,6 +115,30 @@ public class HelloServlet extends javax.servlet.http.HttpServlet {
             }
             System.out.println("key ==  "+key+"   value ==  "+value);
         }
+
+
+        Cookie cookie = new Cookie("name", "liubo");
+        //以秒计算 默认-1,关闭浏览器就失效 cookie由服务器生成,存在客户端
+        cookie.setMaxAge(60*60*24*7);
+        //用于指定请求的域名 才会带上该cookie
+        cookie.setDomain(".com");
+        //只有访问该域名下的CookieDemo的这个路径才会带上该cookie
+        cookie.setPath("/CookieDemo");
+        response.addCookie(cookie);
+
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie1 : cookies) {
+                String name = cookie1.getName();
+                String value = cookie1.getValue();
+                System.out.println("cookie  "+ name+" == "+value);
+            }
+        }
+
+        //创建session 存放在服务器端 持久化
+        HttpSession session = request.getSession();
+        //session 销毁:1.关闭服务器  2.session会话过期  默认有效期30分钟
+
 
 //        response.setStatus(302);
 //        response.setHeader();
