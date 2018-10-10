@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URLEncoder;
 import java.util.Enumeration;
 
 /**
@@ -67,6 +68,20 @@ public class HelloServlet extends javax.servlet.http.HttpServlet {
          *         URIEncoding="UTF-8" />
          */
 
+        String header = request.getHeader("User-Agent");
+        //如果文件名包含中文需要进行编码
+       /* String filename = "哈哈";
+        if (header.contains("Firefox")) {
+
+            // 火狐浏览器  base64编码
+        } else {
+            //谷歌,IE浏览器
+            filename =  URLEncoder.encode("", "UTF-8");
+        }
+        //让浏览器以下载的方式提醒用户
+        response.setHeader("Content-Disposition","attachment;filename="+filename);*/
+
+
         ServletContext servletContext = getServletContext();
         String namespace = servletContext.getInitParameter("namespace");
         //获取绝对路径
@@ -107,6 +122,12 @@ public class HelloServlet extends javax.servlet.http.HttpServlet {
 //
 //        //规定浏览器使用此编码查看
 //        response.setHeader("Content-Type","text/html;charset=UTF-8");
+
+      /*  //重定向302 至少请求两次 地址显示最后的资源路径 效率低  不是自己的工程也可以跳
+        response.sendRedirect("地址");
+
+        //请求转发 只请求一次 效率高 地址显示请求的servlet的地址
+        request.getRequestDispatcher("地址").forward(request,response);*/
 
         //不管字节流还是字符流,都使用此段代码就行了
         response.setContentType("text/html;charset=UTF-8");
