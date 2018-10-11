@@ -1,5 +1,7 @@
 package jdbc;
 
+import org.apache.commons.dbutils.QueryRunner;
+
 import java.sql.*;
 
 /**
@@ -15,6 +17,12 @@ public class JdbcTest {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
+            QueryRunner queryRunner = new QueryRunner(JDBCUtil.getDataSource());
+            String sql = "insert into test1 values(?,?)";
+            queryRunner.update(sql, "狗蛋", "123456");
+//             User user = queryRunner.query(sql, new BeanHandler<User>(User.class));
+//            List<User> list = queryRunner.query(sql, new BeanListHandler<User>(User.class));
+
             connection = JDBCUtil.getConnection();
             if (connection != null) {
                 /**
@@ -27,7 +35,7 @@ public class JdbcTest {
                 //关闭自动提交 ,事务默认自动提交
                 connection.setAutoCommit(false);
                 //mysql查询语句
-                String sql = "SELECT * FROM test1 where name = ?";
+                 sql = "SELECT * FROM test1 where name = ?";
 //                statement = connection.createStatement();
 //                resultSet = statement.executeQuery(sql);
 
