@@ -58,7 +58,7 @@ public class HelloServlet extends javax.servlet.http.HttpServlet {
 
     @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
+        request.setCharacterEncoding("UTF-8");
         /**
          * get请求request 解决乱码:
          * 1.new String(str.getBytes("ISO-8859-1"),"UTF-8")
