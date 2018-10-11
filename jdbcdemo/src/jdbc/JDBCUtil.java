@@ -94,6 +94,12 @@ public class JDBCUtil {
         closeConnection(connection);
     }
 
+    public static void release(Connection connection, Statement statement) {
+        closeStatement(statement);
+        closeConnection(connection);
+    }
+
+
     private static void closeResultSet(ResultSet resultSet) {
         try {
             if (resultSet != null) {

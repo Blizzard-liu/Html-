@@ -7,14 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a0ceba5-1bfc-4c83-aa56-9b1f83cfda26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jdbcdemo/libs/c3p0-0.9.5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdbcdemo/libs/commons-dbutils-1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdbcdemo/libs/mchange-commons-java-0.2.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdbcdemo/src/c3p0-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbcdemo/src/jdbc/CommonCRUDUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcdemo/src/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcdemo/src/jdbc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jdbcdemo/src/jdbc/JDBCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcdemo/src/jdbc/JDBCUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbcdemo/src/jdbc/JdbcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdbcdemo/src/jdbc/JdbcTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,12 +51,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="5" />
+          <entry key="class" value="6" />
           <entry key="fxml" value="1" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="8" />
           <entry key="iml" value="2" />
-          <entry key="java" value="10" />
+          <entry key="java" value="12" />
           <entry key="jsp" value="4" />
           <entry key="properties" value="5" />
           <entry key="rnc" value="3" />
@@ -72,11 +67,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="5" />
+          <entry key="CLASS" value="6" />
           <entry key="Git file" value="3" />
           <entry key="HTML" value="8" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="12" />
           <entry key="JSP" value="4" />
           <entry key="Properties" value="5" />
           <entry key="RNG Compact" value="3" />
@@ -88,7 +83,7 @@
         <counts>
           <entry key="ft" value="15" />
           <entry key="html" value="1680" />
-          <entry key="java" value="2253" />
+          <entry key="java" value="2505" />
           <entry key="jsp" value="1776" />
           <entry key="properties" value="11" />
           <entry key="xml" value="175" />
@@ -97,7 +92,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1680" />
-          <entry key="JAVA" value="2253" />
+          <entry key="JAVA" value="2505" />
           <entry key="JSP" value="1776" />
           <entry key="Properties" value="11" />
           <entry key="VTL" value="15" />
@@ -143,14 +138,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/JdbcTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+            <state relative-caret-position="132">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/CommonCRUDUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1007">
+              <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -171,8 +175,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/JDBCUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="354">
+              <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2697#2698#0" expanded="true" />
@@ -191,10 +195,11 @@
         <option value="HTML File" />
         <option value="Arquillian JUnit Test Class" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -233,9 +238,11 @@
         <option value="$PROJECT_DIR$/servlet/src/HelloServlet.java" />
         <option value="$PROJECT_DIR$/jdbcdemo/src/jdbc.properties" />
         <option value="$PROJECT_DIR$/jdbcdemo/src/c3p0-config.fxml" />
-        <option value="$PROJECT_DIR$/jdbcdemo/src/jdbc/JDBCUtil.java" />
         <option value="$PROJECT_DIR$/jdbcdemo/src/c3p0-config.xml" />
         <option value="$PROJECT_DIR$/jdbcdemo/src/jdbc/JdbcTest.java" />
+        <option value="$PROJECT_DIR$/jdbcdemo/src/jdbc/JDBCUtil.java" />
+        <option value="$PROJECT_DIR$/jdbcdemo/src/jdbc/ResultSetHandler.java" />
+        <option value="$PROJECT_DIR$/jdbcdemo/src/jdbc/CommonCRUDUtils.java" />
       </list>
     </option>
   </component>
@@ -327,14 +334,6 @@
             <path>
               <item name="mavenTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="mavenTest" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbcdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="JdbcTest" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="mavenTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mavenTest" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -407,7 +406,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539248164842" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539250638219" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -874,7 +873,7 @@
       <workItem from="1539046805329" duration="16708000" />
       <workItem from="1539075817505" duration="3799000" />
       <workItem from="1539133161905" duration="20708000" />
-      <workItem from="1539219718938" duration="20301000" />
+      <workItem from="1539219718938" duration="22952000" />
     </task>
     <servers />
   </component>
@@ -893,7 +892,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96325000" />
+    <option name="totallyTimeSpent" value="98976000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -908,7 +907,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49630997" visible="true" weight="0.19402985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49630997" visible="true" weight="0.19402985" />
       <window_info id="Structure" order="1" sideWeight="0.5016611" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1177,18 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/JDBCUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2697#2698#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/JdbcTestTest1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1214,13 +1201,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2697#2698#0" expanded="true" />
+            <element signature="e#2732#2733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/JdbcTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        <state relative-caret-position="132">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/ResultSetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jdbcdemo/libs/commons-dbutils-1.7.jar!/org/apache/commons/dbutils/ResultSetHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbcdemo/src/jdbc/CommonCRUDUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1007">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
         </state>
       </provider>
     </entry>
